@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+      font-family: Georgia, 'Times New Roman', Times, serif;
+}
+ 
+
+@keyframes glisse
+{
+	0%{
+		transform: translateX(0);
+	}
+	25%
+	{
+		transform: translateX(0);
+	}
+	50%
+	{
+		transform: translateX(-50%);
+	}
+	55%
+	{
+		transform: translateX(-50%);
+	}
+	65%
+	{
+		transform: translateX(-50%);
+	}
+	75%{
+		transform: translateX(-50%);
+	}
+	95%
+	{
+		transform: translateX(1);
+	}
+
+	100%{
+		transform: translateX(0);
+	}
+}
+
+
+/********************************/
+
+.slider_component
+{
+    width: 100%;
+}
+.slider
+{
+  
+    position: relative;
+    width: 1080px;
+    height: 600px;
+    overflow: hidden;
+    margin: auto;
+}
+.slider figure
+{
+margin: auto;
+width: 200%;
+height: 100%;
+ display: flex;
+}
+.derouler_animation
+{
+  animation: glisse    10s infinite linear;
+animation-timing-function: ease-in-out;  
+}
+.slider figure img 
+{
+    width: 1080px;
+    height: 100%;
+ 
+} 
+
+ 
+/* .slider figure img:nth-child(2)
+{
+    order: 1;
+ 
+}  */
+.slider .courant
+{
+    display: none;
+}
+
+/*------------------------------------------
+              Les buttons
+---------------------------------------------*/
+.btn_component
+{
+     
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    color: white;
+    display: flex;
+}
+
+.marquer
+{
+    margin-top: 50%;
+    margin-left: 40%;
+} 
+
+.marquer li 
+{
+     
+    list-style-type: none;
+    display: inline-block;
+    width: 5px;
+    height: 20px;
+    background-color: rgb(255, 255, 255);
+      
+}
+.marquer .active
+{
+    background-color: rgb(216, 0, 83);
+}
+
+
+#previous,#next
+{
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    margin-top: 30%;
+    cursor: pointer;
+    color: white;
+}
+
+#previous :hover
+{
+   color: rgb(192, 191, 190);  
+   transition: 0.3s ease-in-out;
+}
+
+#next :hover
+{
+    color: rgb(192, 191, 190);  
+   transition: 0.3s ease-in-out;
+}
+
+#next
+{
+    position: absolute;
+    right: 0;
+}
+ 
+
